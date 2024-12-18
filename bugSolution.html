@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug Solution</title>
+</head>
+<body>
+  <div id="myDiv">
+    This text will be hidden initially.
+  </div>
+  <button onclick="myFunction()">Show/Hide</button>
+
+  <script>
+    function myFunction() {
+      var x = document.getElementById("myDiv");
+      // Corrected use of display property to correctly hide the element
+      x.style.display = "none"; 
+    }
+  </script>
+</body>
+</html>
