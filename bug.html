@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug</title>
+</head>
+<body>
+  <div id="myDiv">
+    This text will be hidden initially.
+  </div>
+  <button onclick="myFunction()">Show/Hide</button>
+
+  <script>
+    function myFunction() {
+      var x = document.getElementById("myDiv");
+      // The bug is on this line: Incorrect use of the visibility property
+      x.style.visibility = "hidden"; // Should be x.style.display = "none"; to completely hide
+    }
+  </script>
+</body>
+</html>
